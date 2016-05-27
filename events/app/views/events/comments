@@ -1,0 +1,13 @@
+<!-- 
+Listing generated at <%= @time %>
+
+<ul>
+  <li>BugSmash</li>
+  <li>Hackathon</li>
+  <li>Kata Camp</li>
+</ul> ¨
+-->
+<!-- 
+<% ... %> : run ruby code without displaying the result
+<%= ... %> : will display the result 
+-->
