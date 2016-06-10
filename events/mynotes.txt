@@ -1,0 +1,52 @@
+# To create a model (from project root dir)
+
+# models are single name, tables plural
+# coluns:type
+# we dont have to add id in here, rails will take care of that
+
+rails g model event name:string location:string price:decimal
+
+# that has created file under db/migrate/ : genericruby code that can interact with different db and create tables
+# to actually create the table we have to run the migration with rake
+
+rake -T # show all the tasks
+
+rake db:migrate # ceate events db table
+
+rake db:migrate:status # show the status of the db migrate
+
+# we can use rails console to fill db while model is there and no interface yet !
+
+rails c
+
+# to create and object event e 
+
+e = Event.new
+
+# to fill e 
+
+e.name = "BugSmash"
+...
+
+# to save e 
+
+e.save
+
+# or 
+
+e = Event.new(name: "Hackathon", location: "Austin, TX", price: 15.00)
+e.save
+
+# or directly save
+
+e = Event.create(name: "Kata Camp", location: "Dallas, TX", price: 75.00)
+
+# to find event with id = 3
+
+e = Event.find(3)
+
+e = Event.find_by(name: "Kata Camp")
+
+e.price.to_s # will return "75.00"
+
+
