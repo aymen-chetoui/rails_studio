@@ -26,3 +26,20 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+# To create input in DB 
+
+rake db:migrate
+rake db:migrate:status
+
+rails c
+Event.create(name: 'Canoing', location: 'London', price: 100)
+Event.create(name: 'Hicking', location: 'Bergen', price: 75)
+Event.create(name: 'Marathon', location: 'Copenhagen', price: 250)
+
+
+# Find rails process by pid 
+$ cat  C:/Users/ach/Dropbox/ruby-lesson/rails_studio/events/tmp/pids/server.pid
+5808
+tasklist /fi "pid eq 5808"

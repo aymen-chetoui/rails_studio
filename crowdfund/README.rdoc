@@ -26,3 +26,14 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+# To create input in DB 
+
+rake db:migrate
+rake db:migrate:status
+
+rails c
+Project.create(name: 'Smart Home', description: 'When Home is smarter than your house.', target_pledge_amount: 200500)
+Project.create(name: 'Green Watch', description: 'Not only about time you know.', target_pledge_amount: 100000)
+Project.create(name: 'Magic Bread', description: 'Have magical power eating this bread.', target_pledge_amount: 7500)

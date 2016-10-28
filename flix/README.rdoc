@@ -26,3 +26,14 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+# To create input in DB 
+
+rake db:migrate
+rake db:migrate:status
+
+rails c
+Movie.create(title: 'Iron-Man', rating: 'PG-13', total_gross: 318412101)
+Movie.create(title: 'Superman', rating: 'PG', total_gross: 134218018)
+Movie.create(title: 'Spider-Man', rating: 'PG-13', total_gross: 403706375)
